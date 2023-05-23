@@ -11,7 +11,7 @@ def start():
         elif answer == '2':
             name = input('Введите фамилию контакта:\n') # может сделать отдельно ФИО, отельно телефон?
             phone = input('Введите телефон контакта:\n')
-            model.add_contact(data)
+            model.add_contact(name, phone)
         
         elif answer == '3':
             data = input('Введите данные контакта через пробел\n')
