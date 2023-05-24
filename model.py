@@ -1,13 +1,10 @@
-def add_contact(data: str):
-    # with open('file.txt', 'a', encoding='utf-8') as file:
-    #     file.write(f'{data}\n')
-    
-    with open('file.txt', 'w', encoding='utf-8') as file:
-        file.write(f'{data}\n')
+def add_contact(name, phone: str):
+    with open('file.txt', 'a', encoding='utf-8') as file:
+        file.write(f'{name} - {phone}\n') 
         
         
-if __name__ == '__main__':
-    add_contact('Hello world')
+# if __name__ == '__main__':
+#     add_contact('Hello world')
     
     
 def read_file():
