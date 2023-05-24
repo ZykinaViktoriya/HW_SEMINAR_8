@@ -22,3 +22,9 @@ def delete_contact(data: str):
         for i in range(0, len(data)):
             if name == data[i]['Name'] or name == data[i]['Surname']:
                 del data[i]
+
+def find_contact(data: str, query):
+        with open('file.txt') as file:
+            for line in file:
+                if (data.last_name, data.name) == query:
+                    return data
