@@ -15,7 +15,7 @@ def read_file():
         return file.read().split('\n')[: -1]
     
 
-def delete_contact(data: str):
+def delete_contact(data: str, query):
     name = input('Введите имя или фамилию контакта, который хотите удалить:  ')
 
     with open('file.txt', 'r', encoding='UTF-8') as file:
