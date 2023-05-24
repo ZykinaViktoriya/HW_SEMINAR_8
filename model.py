@@ -13,7 +13,7 @@ def read_file():
     
 
 def delete_contact(data: str, query):
-    name = input('Введите имя или фамилию контакта, который хотите удалить:  ')
+    query = input('Введите имя или фамилию контакта, который хотите удалить:  ')
 
     with open('file.txt', 'r', encoding='UTF-8') as file:
         for i in range(0, len(data)):
@@ -21,6 +21,7 @@ def delete_contact(data: str, query):
                 del data[i]
 
 def find_contact(data: str, query):
+    query = input('Введите имя контакта для поиска: ')
         with open('file.txt') as file:
             for line in file:
                 if (data.last_name, data.name) == query:
