@@ -13,3 +13,12 @@ if __name__ == '__main__':
 def read_file():
     with open('file.txt', 'a', encoding='utf-8') as file:
         return file.read().split('\n')[: -1]
+    
+
+def delete_contact(data: str):
+    name = input('Введите имя или фамилию контакта, который хотите удалить:  ')
+
+    with open('file.txt', 'r', encoding='UTF-8') as file:
+        for i in range(0, len(data)):
+            if name == data[i]['Name'] or name == data[i]['Surname']:
+                del data[i]
